@@ -1,5 +1,7 @@
 //You can change the pins according to your preference.
 
+//If you are using a Bluetooth module, be sure to remove the voltage of the Bluetooth module (+ vcc) before using the code!
+
 int SCL_PIN=11;//D0
 int SDA_PIN=8; //D1
 int RST_PIN=12;//RST
@@ -20,9 +22,6 @@ int DC_PIN=10; //DC
  void LED_PrintEdge(void);
  void LED_Cursor(unsigned char cursor_column, unsigned char cursor_row);
  void LED_PrintLine(void);
-
-
-
 
 
 const unsigned char F6x8[][6] =
@@ -767,7 +766,7 @@ void LED_PrintValueI(unsigned char x, unsigned char y, int data)
  void loop()
  {
     //LED_P8x16Str(0,0,"welcome");
-    LED_P6x8Str(1,0,"FirstLine");
+    //LED_P6x8Str(1,0,"FirstLine");
     //LED_P8x16Str(40,2,"SecondLine");
     //LED_P8x16Str(20,4,"ThirdLine");
  }
